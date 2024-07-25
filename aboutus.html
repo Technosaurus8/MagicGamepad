@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Magic Gamepad | About Us</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="container mt-3" style="background-image: url('bgimg3.jpg'); background-size: cover; background-position: center;">
+    <div id="header-container"></div>
+    <div id="content" style="margin-left: 0%; padding: 16px; ">
+        <h1 class="text-center display-4">About Us</h1>
+        <hr>
+        <p>MagicGamepad is developed by Technosaurus, a passionate indie developer committed to enhancing user experiences through innovative applications.</p>
+        <hr>
+        <h3>Licence Terms & Conditions</h3>
+        <h5>Freeware License</h5>
+        <p>This software is provided as freeware. You are permitted to use this software for personal, non-commercial purposes without charge. Redistribution and modification of this software, in whole or in part, are not permitted without explicit prior written permission from the copyright holder.</p>
+        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        <hr>
+        <h5>Attribution</h5>
+        <p>This application utilizes ViGEmBus, a virtual gamepad emulation driver released as open-source under the BSD 3-Clause License. The names of the copyright holder and contributors cannot be used to endorse or promote products derived from this software without specific prior written permission.</p>
+        <ul>
+            <li>ViGEmBus GitHub Repository: <a href="https://github.com/ViGEm/ViGEmBus">ViGEmBus Repository</a></li>
+            <li>BSD 3-Clause License: <a href="https://github.com/ViGEm/ViGEmBus/blob/master/LICENSE">BSD 3-Clause License</a></li>
+        </ul>
+        <p>This application also utilizes InputSimulator, released under the MIT License.</p>
+        <ul>
+            <li>InputSimulator GitHub Repository: <a href="https://github.com/michaelnoonan/inputsimulator">Input Simulator Repository</a></li>
+            <li>MIT License: <a href="https://github.com/michaelnoonan/inputsimulator/blob/master/LICENSE">MIT License</a></li>
+        </ul>
+        <hr>
+        <h3>Image Attributions</h3>
+                <ul>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:NotoSans_-_Keyboard_And_Mouse_-_1F5A6.svg" target="_blank">https://commons.wikimedia.org/wiki/File:NotoSans_-_Keyboard_And_Mouse_-_1F5A6.svg</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Video_Game_Controller_(56435)_-_The_Noun_Project.svg" target="_blank">https://commons.wikimedia.org/wiki/File:Video_Game_Controller_(56435)_-_The_Noun_Project.svg</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Wii_Classic_Controller_Icon.svg">https://commons.wikimedia.org/wiki/File:Wii_Classic_Controller_Icon.svg</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:A_vector_illustration_of_the_front_of_the_Samsung_Galaxy_A50_in_Blue_3.png" target="_blank">https://commons.wikimedia.org/wiki/File:A_vector_illustration_of_the_front_of_the_Samsung_Galaxy_A50_in_Blue_3.png</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:MSI_Thin_GF63_12UC-667_HOF2213-HDR_RAW-Export.png" target="_blank">https://commons.wikimedia.org/wiki/File:MSI_Thin_GF63_12UC-667_HOF2213-HDR_RAW-Export.png</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(3).jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(3).jpg</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(2).jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(2).jpg</a></li>
+                    <li><a href="https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(2).jpg" target="_blank">https://commons.wikimedia.org/wiki/File:Android_Honeycomb_default_wallpaper_(1).jpg</a></li>
+                </ul>
+    </div>
+<script src="header.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('common/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+                removeMenu(); // Call removeMenu after the header is loaded
+            });
+    });
+</script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

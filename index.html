@@ -1,74 +1,139 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<title>Magic Gamepad</title>
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <script src="bootstrap.bundle.min.js"></script>
-
-	<style>
-		img{
-			width: 80%
-		}
-		.mobileimg{
-			width: 40%
-		}
-		h1{
-			font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
-		}
-		span{
-			color:#FF0004;
-		}
-		hr{
-			color:hsla(173,79%,19%,1.00);
-			border:2px solid;
-		}
-	</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magic Gamepad</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+            <!-- Template Stylesheet -->
+            <link href="css/style.css" rel="stylesheet">
+                        <!-- Google Web Fonts -->
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+                
+                        <!-- Icon Font Stylesheet -->
+                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css"/>
+                        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+                
+                        <!-- Libraries Stylesheet -->
+                        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+                        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+                        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <style>
+        #content {
+            background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+        }
+    </style>
 </head>
-
-<body style="background-color:hsla(190,100%,50%,0.15)">
-<div class="container mt-3">
-	<h1 style="color:hsla(169,82%,17%,1.00)" class="text-center display-3"><b>H<small>OW</small> T<small>O</small> I<small>NSTALL</small> A<small>ND</small> U<small>SE</small> T<small>HE</small> A<small>PP</small></b></h1>
-	<hr>
-	<h6>If you prefer a video tutorial, click <a href="https://youtu.be/2rbj23qso_8">here</a></h6>
-	<h3>Step 1: Download and Install the App</h3>
-	<ul>
-	<li>Download the desktop app from the provided link or by searching on Google: <a href="https://technosaurus8.github.io/MagicGamepad/MagicGamepadSetup.exe">download</a></li>
-	<li>Open the setup file.</li></ul>
-	<hr>
-<p>Click <span>“I agree the Licenses terms and conditions”</span></p>
-	<img src="1.png" /><br>
-<br>
-
-  <p>If you want to change the location, change the installation location and then click <span>"Next."</span></p>
-	
-	<hr>
-	<img src="2.png">
-<p>Click <span>"Install"</span></p>
-<hr>
-  <img src="3.png"/>
-	<br>
-<p>For the app to work properly, it's recommended to reboot your system. You can do this by checking the reboot option and clicking <span>"Finish,"</span> or click <span>"No, I will restart the computer later"</span> and click <span>"Finish"</span> to complete the setup without rebooting.</p>
-	<hr>
-<h3 class="mt-4">Step 2: Connecting Your Mobile to Desktop </h3>
-	<p>Ensure that both devices are connected to the same network (LAN, Wi-Fi, mobile hotspot, or USB tethering—internet connection is not required)if you are using mobile hotspot or USB tethering it is necessary to turn off mobile data or wifi for the app to properly connect or u will need to manually connect.</p>
-	<br>
-<p>Open the desktop app.</p>
-	<img src="4.png">
-	<p>You'll see the connection status and IP address displayed.</p>
-	<hr>
-
-<h4 class="mt-4">On your mobile device:</h4>
-	<p>Open the app.</p>
-	<img src="5.jpg" class="mobileimg">
-	<p>Click <span>"Auto Connect"</span> to automatically connect to your computer.</p>
-<hr>
-	<img src="6.jpg" class="mt-4 mobileimg">
-	<p>Or else, click <span>"Manual Connect,"</span> enter the displayed IP address, and click <span>"Connect."</span></p>
-<hr>
-	<img src="7.png" class="mt-4">
-  <p>You are now successfully connected.</p>
-	</div>
+<body style="overflow-x: hidden;">
+    <div id="header-container"></div>
+    <div id="content" style="margin-left: 0%;">
+        <section id="home"  style="background-image: url('bgimg1.jpg'); background-size: cover; background-position: center;">
+            <h1 class="text-center display-4">Welcome to Magic Gamepad!</h1>
+            <br>
+            <div class="row">
+                <div class="col-sm-7">
+                    <img class="img-fluid" width="100%" src="multiplayer.png" />
+                </div>
+                <div class="col-sm-5 d-flex flex-column justify-content-center align-items-center">
+                    <p class="text-center">Transform your phone into a versatile game controller with Magic Gamepad. Enjoy seamless multiplayer experience.</p>
+                    <div class="d-flex justify-content-around align-items-center w-100">
+                        <a href="https://technosaurus8.github.io/MagicGamepad/MagicGamepadSetup.exe" class="btn btn-primary">
+                            <img src="Windows_logo_-_2012.svg" alt="Download" style="width: 30px; height: 30px; margin-right: 8px; ">
+                            Download
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.technosaurus.MagicGamepad" class="">
+                            <img src="Google_Play_Store_badge_EN.svg" alt="Google Play Store Badge" style="width: 83%;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="container-fluid feature bg-dark py-5">
+            <div class="container py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                    <h1 class="display-4 mb-4">Features</h1>
+                    <p class="mb-0">MagicGamepad is your ultimate solution for transforming your Android device into a versatile game controller. Designed with multiplayer gaming in mind, our app lets you and your friends join the fun seamlessly. Connect multiple devices and enjoy a collaborative and competitive gaming experience.
+                    </p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="feature-item p-4 pt-0" style="color: black;">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="controller"></i>
+                            </div>
+                            <h4 class="mb-4">Game Compatibility</h4>
+                            <p class="mb-4">Most XInput-supported games are compatible with MagicGamepad, ensuring you can enjoy a wide range of popular games with ease </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="feature-item p-4 pt-0" style="color: black;">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="volume"></i>
+                            </div>
+                            <h4 class="mb-4">Volume Control</h4>
+                            <p class="mb-4"> Adjust the volume directly using the volume buttons on your phone, providing a simple and intuitive way to manage audio levels while gaming or using your PC.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="feature-item p-4 pt-0" style="color: black;">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="multi"></i>
+                            </div>
+                            <h4 class="mb-4">Multiplayer Support</h4>
+                            <p class="mb-4">Connect multiple devices to the same PC for an unparalleled multiplayer gaming experience. Play with friends and enjoy cooperative or competitive gameplay with ease
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="feature-item p-4 pt-0" style="color: black;">
+                            <div class="feature-icon p-4 mb-4">
+                                <i class="kbm"></i>
+                            </div>
+                            <h4 class="mb-4">Keyboard and Touchpad Input</h4>
+                            <p class="mb-4">Type with ease using your Android device as a keyboard and navigate your PC effortlessly with the touchpad functionality. It is useful when you need to use a keyboard or mouse while gaming from a distance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="background-image: url('bgimg2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+            <section id="how-it-works">
+                <h2>How It Works</h2>
+                <ol>
+                    <li><strong>Download and Install the Mobile App:</strong> Download MagicGamepad from the Google Play Store and install it on your Android device.</li>
+                    <li><strong>Download and Install the Desktop App:</strong> Download the MagicGamepad desktop app for Windows from our website and install it on your PC.</li>
+                    <li><strong>Connect Your Devices:</strong> Connect your Android device to your PC using Wi-Fi, USB tethering, or hotspot. Follow our easy setup guide to get started quickly.</li>
+                    <li><strong>Select Your Controller Number:</strong> Choose your player number to ensure seamless multiplayer gaming. You can connect up to 4 devices for an engaging multiplayer experience.</li>
+                    <li><strong>Enjoy:</strong> Start gaming, controlling media, or navigating your PC with ease using MagicGamepad.</li>
+                </ol>
+            </section>
+            <section id="support">
+                <h2>Support and Help</h2>
+                <p>Need assistance? Check out our <a href="help.html">Help Page</a> for detailed guides, FAQs, and troubleshooting tips.</p>
+            </section>
+            <section id="social">
+                <h2>Stay Connected</h2>
+                <p>Follow us on <a href="https://youtube.com/@techiknow5688?si=rb8jHRyzt3dy1c8z">YouTube</a> for the latest updates and news.</p>
+            </section>
+        </div>
+    </div>
+    <script src="header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('common/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    removeMenu(); // Call removeMenu after the header is loaded
+                });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

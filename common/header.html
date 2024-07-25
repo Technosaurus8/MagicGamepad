@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagicGamepad</title>
+    <style>
+        /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    color: #fff;
+    padding-top: 50px; /* Adjust this based on the header height */
+}
+
+header {
+    background-color: #2d2d2d;
+    padding: 10px 0;
+    position: fixed; /* Fixes the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures it spans the full width */
+    z-index: 1000; /* Keeps it above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #00c8c8;
+}
+
+.app-name {
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.theme-toggle {
+    font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li style="cursor: pointer;"><a id="menu" onclick="toggleNav()">&#9776;</a></li>
+                <li class="app-name">Magic Gamepad</li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/help.html">Help</a></li>
+                <li><a href="/aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
