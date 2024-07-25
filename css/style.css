@@ -280,22 +280,22 @@
 
 .feature .feature-item:hover .feature-icon .volume{
     color: var(--bs-white);
-    content: url('/svg/volume_white.svg');
+    content: url('/MagicGamepad/svg/volume_white.svg');
 }
 
 .feature .feature-item:hover .feature-icon .kbm{
     color: var(--bs-white);
-    content: url('/svg/kbm_white.svg');
+    content: url('/MagicGamepad/svg/kbm_white.svg');
 }
 
 .feature .feature-item:hover .feature-icon .multi{
     color: var(--bs-white);
-    content: url('/svg/multi_white.svg');
+    content: url('/MagicGamepad/svg/multi_white.svg');
 }
 
 .feature .feature-item:hover .feature-icon .controller{
     color: var(--bs-white);
-    content: url('/svg/controller_white.svg');
+    content: url('/MagicGamepad/svg/controller_white.svg');
 }
 .feature .feature-item:hover h4,
 .feature .feature-item:hover p {
