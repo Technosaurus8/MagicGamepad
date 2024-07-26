@@ -9,17 +9,11 @@
 </head>
 <body style="overflow-x: hidden;">
 <style>
-    #installd {
+    #installd,#connect,#video,#usb,#gameplay,#Gamepad_ui {
     padding-top: 50px;
     margin-top: -50px;
     -webkit-background-clip: content-box;
     background-clip: content-box; 
-}
-    #connect{
-    padding-top: 50px;
-    margin-top: -50px;
-    -webkit-background-clip: content-box;
-    background-clip: content-box;     
 }
 #video{
     padding-top: 50px;
@@ -50,15 +44,15 @@
     <hr>
     <img src="/MagicGamepad/3.png" alt="Installation Progress Screenshot">
     <p>For the app to work properly, it's recommended to reboot your system. You can do this by checking the reboot option and clicking <span>"Finish,"</span> or click <span>"No, I will restart the computer later"</span> and click <span>"Finish"</span> to complete the setup without rebooting.</p>
-    <hr>
-
-    <h3 id="connect">Step 2: Connecting Your Mobile to Desktop</h3>
+    
+    <hr id="connect">
+    <h3 >Step 2: Connecting Your Mobile to Desktop</h3>
     <p>Ensure that both devices are connected to the same network (LAN, Wi-Fi, mobile hotspot, or USB tethering—internet connection is not required). If you are using mobile hotspot or USB tethering, it is necessary to turn off mobile data or Wi-Fi for the app to properly connect, or you will need to manually connect.</p>
     <p>Open the desktop app.</p>
     <img src="/MagicGamepad/4.png" alt="Desktop App Screenshot">
     <p>You'll see the connection status and IP address displayed.</p>
+    
     <hr>
-
     <h3>On your mobile device:</h3>
     <p>Open the app.</p>
     <img src="/MagicGamepad/5.jpg" class="mobileimg" alt="Mobile App Home Screen">
@@ -68,12 +62,43 @@
     <p>Or click <span>"Manual Connect,"</span> enter the displayed IP address, and click <span>"Connect."</span></p>
     <hr>
     <img src="/MagicGamepad/7.png" alt="Mobile App Manual Connect Screen">
-    <p>You are now successfully connected.</p>
-
-    <p id="video" class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/2rbj23qso_8">here</a></p>
+    <p><strong>Note:</strong> If you want to connect two or more devices, ensure all devices are connected to the same Wi-Fi network and repeat the connection steps for each device. If you are experiencing any delay, try connecting with USB tethering.</p>
+    
+    <hr >
+    <h3 id="usb">Here are the steps for connecting via USB tethering</h3>
+    <p>Connect USB cable to your computer and open settings.</p>
+    <img src="/MagicGamepad/8.jpeg" class="mobileimg">
+    <p>Click <span>“Click Network and internet”</span></p>
+    <hr>
+    <img src="/MagicGamepad/9.jpeg"class="mobileimg">
+    <p>Click <span> “hotspot and tethering”</span></p>
+    <hr>
+    <img src="/MagicGamepad/10.jpeg"class="mobileimg">
+    <p>Enable usb tethering.</p>
+    <p><strong>Note:</strong>This method may vary depending on the phone brand.</p>
+    <p><strong>Important:</strong>: If you want to connect multiple devices using USB tethering, make sure all desired devices are connected before opening the app and make sure that Wi-Fi and mobile data are disabled while Connecting the Android device to prevent any connection conflicts.</p>
+    <p>Open Magic Gamepad on both the computer and phone and connect as you would with the Wi-Fi method.</p>
+    
+    <hr id="video">
+    <p  class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/2rbj23qso_8">here</a></p>
     <iframe width="854px" height="480px"
     src="https://www.youtube.com/embed/2rbj23qso_8" allowfullscreen="1">
     </iframe>
+    
+    <hr >
+    <h3 id="Gamepad_ui">Gamepad UI and Player Selection</h3>
+    <p>Once connected, MagicGamepad will display a gamepad UI along with a dialogue box that provides an option to select the player number/controller numbe. This allows for easy identification and configuration for multiple users or devices.</p>
+    <img src="/MagicGamepad/11.jpeg" alt="">
+    <br>
+    <br>
+    <img src="/MagicGamepad/12.jpeg" alt="">
+    <p>You can connect up to 4 devices and should ensure that you select different numbers for different users</p>
+    <hr>
+    <p id="gameplay" class="text-center">If you want to see a gameplay video, click <a href="https://youtu.be/eRTxnI6T3TU">here</a></p>
+    <iframe width="854px" height="480px"
+    src="https://www.youtube.com/embed/eRTxnI6T3TU" allowfullscreen="1">
+    </iframe>
+    
 </div>
 <script src="/MagicGamepad/header.js"></script>
 <script src="/MagicGamepad/sidenav.js"></script>
