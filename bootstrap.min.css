@@ -8,18 +8,6 @@
 body {
     background-color: hsla(190, 100%, 50%, 0.15);
 }
-.bg {
-    /* The image used */
-    background-image: url("img_girl.jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 h1 {
     font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
     color: rgb(15, 138, 116);
