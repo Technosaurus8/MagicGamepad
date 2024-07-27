@@ -1,4 +1,4 @@
-var open = 1;
+var open = window.innerWidth <= 750 ? 0 : 1;
 var mobile = window.innerWidth <= 750 ? 1 : 0;
 
 function toggleNav() {
