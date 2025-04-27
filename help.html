@@ -10,17 +10,11 @@
 </head>
 <body style="overflow-x: hidden;">
 <style>
-    #installd,#connect,#video,#usb,#gameplay,#Gamepad_ui,#additional,#touchpad,#keyboard,#volume,#customization {
+    #installd,#connect,#video,#usb,#gameplay,#Gamepad_ui,#additional,#touchpad,#keyboard,#volume,#customization,#bluetooth,#wifi{
     padding-top: 50px;
     margin-top: -50px;
     -webkit-background-clip: content-box;
     background-clip: content-box; 
-}
-#video{
-    padding-top: 50px;
-    margin-top: -50px;
-    -webkit-background-clip: content-box;
-    background-clip: content-box;     
 }
 iframe,video{
     width: 100%;
@@ -60,7 +54,7 @@ iframe,video{
     <p>You'll see the connection status and IP address displayed.</p>
 
     <hr>
-    <h3>Connecting via Wi-Fi or Mobile Hotspot</h3>
+    <h3 id="wifi">Connecting via Wi-Fi or Mobile Hotspot</h3>
     <p>On your mobile device:</p>
     <p>Open the app.</p>
     <img src="/MagicGamepad/5.png" class="mobileimg" alt="Mobile App Home Screen">
