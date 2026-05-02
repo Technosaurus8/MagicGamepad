@@ -2,161 +2,300 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>Magic Gamepad Installation Guide</title>
-    <link href="/MagicGamepad/bootstrap.min.css" rel="stylesheet">
-    <link href="/MagicGamepad/css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Magic Gamepad — Installation &amp; Setup Guide</title>
+    <meta name="description" content="Step-by-step guide to install and set up Magic Gamepad. Connect your Android phone to your PC via Wi-Fi, USB, or Bluetooth and start gaming.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Magic Gamepad — Installation & Setup Guide">
+    <meta property="og:description" content="Step-by-step guide to set up Magic Gamepad on your Android phone and Windows PC.">
+    <meta property="og:url" content="https://technosaurus8.github.io/MagicGamepad/help.html">
+    <meta property="og:type" content="article">
+
     <link rel="icon" type="image/x-icon" href="/MagicGamepad/favicon.ico">
+    <link rel="canonical" href="https://technosaurus8.github.io/MagicGamepad/help.html">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.6.0/css/all.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link href="/MagicGamepad/css/style.css" rel="stylesheet">
 </head>
-<body style="overflow-x: hidden;">
-<style>
-    #installd,#connect,#video,#usb,#gameplay,#Gamepad_ui,#additional,#touchpad,#keyboard,#volume,#customization,#bluetooth,#wifi{
-    padding-top: 50px;
-    margin-top: -50px;
-    -webkit-background-clip: content-box;
-    background-clip: content-box; 
-}
-iframe,video{
-    width: 100%;
-}
+<body>
 
-</style>
+    <!-- Header -->
+    <div id="header-container"></div>
 
-<!-- Placeholder for sidenav -->
-<div id="sidenav-placeholder"></div>
-<div id="header-container"></div>
-<div id="content" class="content" style="padding:16px;">
-    <h1 class="text-center display-4"><b>How to Install and Use the App</b></h1>
-    <hr>
-    <h3 id="installd">Download and Install the App</h3>
-    <ul>
-        <li>Download the desktop app from the provided link or by searching on Google: <a href="https://technosaurus8.github.io/MagicGamepad/MagicGamepadSetup.exe">download</a></li>
-        <li>Open the setup file.</li>
-    </ul>
-    <hr>
-    <p>Click <span>“I agree to the Licenses terms and conditions”</span></p>
-    <img src="/MagicGamepad/1.png" alt="License Agreement Screenshot">
-    <p>If you want to change the location, change the installation location and then click <span>"Next."</span></p>
-    <hr>
-    <img src="/MagicGamepad/2.png" alt="Installation Location Screenshot">
-    <p>Click <span>"Install"</span></p>
-    <hr>
-    <img src="/MagicGamepad/3.png" alt="Installation Progress Screenshot">
-    <p>For the app to work properly, it's recommended to reboot your system. You can do this by checking the reboot option and clicking <span>"Finish,"</span> or click <span>"No, I will restart the computer later"</span> and click <span>"Finish"</span> to complete the setup without rebooting.</p>
-    
-    <hr>
-    <h3 id="connect">Connecting Your Mobile to Desktop</h3>
-    <p>For Wi-Fi, mobile hotspot, or USB tethering, both devices must be on the same local network (no internet connection is required).
-        If you're using mobile hotspot or USB tethering, turn off mobile data or Wi-Fi on the Android device to ensure proper connection, or connect manually if needed.
-        For Bluetooth, pair the devices before connecting through the app.</p>
-    <p>Open the desktop app.</p>
-    <img src="/MagicGamepad/4.png" alt="Desktop App Screenshot">
-    <p>You'll see the connection status and IP address displayed.</p>
+    <main class="help-layout">
 
-    <hr>
-    <h3 id="wifi">Connecting via Wi-Fi or Mobile Hotspot</h3>
-    <p>On your mobile device:</p>
-    <p>Open the app.</p>
-    <img src="/MagicGamepad/5.png" class="mobileimg" alt="Mobile App Home Screen">
-    <p>Click <span>"Auto Connect"</span> to automatically connect to your computer.</p>
-    <hr>
-    <img src="/MagicGamepad/6.jpg" class="mobileimg" alt="Mobile App Auto Connect Screen">
-    <p>Or click <span>"Manual Connect,"</span> enter the displayed IP address, and click <span>"Connect."</span></p>
-    <hr>
-    <img src="/MagicGamepad/7.png" alt="Mobile App Manual Connect Screen">
-    <p><strong>Note:</strong> If you want to connect two or more devices, ensure all devices are connected to the same Wi-Fi network and repeat the connection steps for each device. If you are experiencing any delay, try connecting with USB tethering.</p>
-    
-    <hr>
-    <h3 id="usb">Here are the steps for connecting via USB tethering</h3>
-    <p>Connect USB cable to your computer and open settings.</p>
-    <img src="/MagicGamepad/8.jpeg" class="mobileimg">
-    <p>Click <span>“Click Network and internet”</span></p>
-    <hr>
-    <img src="/MagicGamepad/9.jpeg"class="mobileimg">
-    <p>Click <span> “hotspot and tethering”</span></p>
-    <hr>
-    <img src="/MagicGamepad/10.jpeg"class="mobileimg">
-    <p>Enable usb tethering.</p>
-    <p><strong>Note:</strong>This method may vary depending on the phone brand.</p>
-    <p><strong>Important:</strong>: If you want to connect multiple devices using USB tethering, make sure all desired devices are connected before opening the app and make sure that Wi-Fi and mobile data are disabled while Connecting the Android device to prevent any connection conflicts.</p>
-    <p>Open Magic Gamepad on both the computer and phone and connect as you would with the Wi-Fi method.</p>
-    
-    <hr>
-    <div id="video">
-        <p  class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/2rbj23qso_8">here</a></p>
-        <iframe width="854px" height="480px"
-        src="https://www.youtube.com/embed/2rbj23qso_8" allowfullscreen="1">
-        </iframe>
-    </div>
+        <!-- TOC Toggle Button -->
+        <button class="toc-toggle" id="tocToggle" aria-label="Toggle table of contents">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <hr>
-    <h3 id="bluetooth">Connecting via Bluetooth</h3>
-    <p>Pair the devices before connecting through the app. If already paired, you can skip this step.</p>
-    <p>Open the desktop app.</p>
-    <img src="/MagicGamepad/4.png" alt="Desktop App Screenshot">
-    <p>Open the mobile app.</p>
-    <img src="/MagicGamepad/5.png" class="mobileimg" alt="Mobile App Home Screen">
-    <p>Click <span>"SELECT DEVICE"</span> to see a list of paired devices.</p>
-    <img src="/MagicGamepad/paireddevice.jpg" alt="Desktop App Screenshot">
-    <p>Select your desktop's name.</p>
-    <p>After selecting, your phone will connect. Now you can start controlling your desktop.</p>
+        <!-- Backdrop overlay -->
+        <div class="toc-backdrop" id="tocBackdrop"></div>
 
-    <hr>
-    <div id="video">
-        <p  class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/cJhylpNVEiI">here</a></p>
-        <iframe width="854px" height="480px"
-        src="https://www.youtube.com/embed/cJhylpNVEiI" allowfullscreen="1">
-        </iframe>
-    </div>
+        <!-- Table of Contents Sidebar -->
+        <aside class="help-toc" id="helpToc" aria-label="Table of Contents">
+            <div class="toc-header">
+                <h3>On This Page</h3>
+                <button class="toc-close" id="tocClose" aria-label="Close table of contents">&times;</button>
+            </div>
+            <ul class="help-toc-list">
+                <li><a href="#installd">Download &amp; Install</a></li>
+                <li><a href="#connect">Connecting Devices</a></li>
+                <ul class="toc-sub">
+                    <li><a href="#wifi">Wi-Fi / Hotspot</a></li>
+                    <li><a href="#usb">USB Tethering</a></li>
+                    <li><a href="#bluetooth">Bluetooth</a></li>
+                </ul>
+                <li><a href="#Gamepad_ui">Gamepad UI &amp; Players</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+                <li><a href="#customization">Customization</a></li>
+                <li><a href="#additional">Additional Features</a></li>
+                <ul class="toc-sub">
+                    <li><a href="#volume">Volume Control</a></li>
+                    <li><a href="#touchpad">Touchpad</a></li>
+                    <li><a href="#keyboard">Keyboard</a></li>
+                </ul>
+            </ul>
+        </aside>
 
-    <hr>
-    <h3 id="Gamepad_ui">Gamepad UI and Player Selection</h3>
-    <p>Once connected, MagicGamepad will display a gamepad UI along with a dialogue box that provides an option to select the player number/controller numbe. This allows for easy identification and configuration for multiple users or devices.</p>
-    <img src="/MagicGamepad/11.jpeg" alt="">
-    <br>
-    <br>
-    <img src="/MagicGamepad/12.jpeg" alt="">
-    <p>You can connect up to 4 devices and should ensure that you select different numbers for different users</p>
-    <hr>
-    <p id="gameplay" class="text-center">If you want to see a gameplay video, click <a href="https://youtu.be/eRTxnI6T3TU">here</a></p>
-    <iframe width="854px" height="480px"
-    src="https://www.youtube.com/embed/eRTxnI6T3TU" allowfullscreen="1">
-    </iframe>
-    
-    <hr>
-    <h3 id="customization">Customization</h3>
-    <p>You can customize the controls to suit your needs. Here's a quick video on how to do it.</p>
-    <iframe width="854px" height="480px"
-    src="https://www.youtube.com/embed/LqAvQSsCfXo" allowfullscreen="1">
-    </iframe>
-    
+        <!-- Main Content -->
+        <div class="help-content">
+            <h1 class="help-page-title">Installation &amp; Setup Guide</h1>
+            <p class="help-page-subtitle">Everything you need to get Magic Gamepad up and running on your devices.</p>
 
-    <hr>
-    <h3 id="additional">Additional features</h3>
-    <h5 id="volume">Control PC Volume Remotely</h5>
-    <p>You can use the volume buttons on your phone to control the volume of your PC.</p>
-    <video width="854" height="480" controls loop>
-        <source src="/MagicGamepad/Volume.mp4" type="video/mp4">
-    </video>
-    
-    <hr>
-    <h5 id="touchpad">Phone as Touchpad</h5>
-    <p>You can use your phone as a touchpad.</p>
-    <video width="854" height="480" controls loop>
-        <source src="/MagicGamepad/Touchpad.mp4" type="video/mp4">
-    </video>
+            <!-- ====== INSTALL ====== -->
+            <section class="guide-section" id="installd">
+                <h2>Download and Install the App</h2>
+                <ul>
+                    <li>Download the desktop app from the provided link or by searching on Google: <a href="https://technosaurus8.github.io/MagicGamepad/MagicGamepadSetup.exe">download</a></li>
+                    <li>Open the setup file.</li>
+                </ul>
 
-    <hr>
-    <h5 id="keyboard">Phone as Keyboard</h5>
-    <p>You can use your phone as a Keyboard.</p>
-    <video width="854" height="480" controls loop>
-        <source src="/MagicGamepad/Keyboard.mp4" type="video/mp4">
-    </video>    
-</div>
-<script src="/MagicGamepad/header.js"></script>
-<script src="/MagicGamepad/sidenav.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                <p>Click <strong>"I agree to the Licenses terms and conditions"</strong></p>
+                <img src="/MagicGamepad/1.png" alt="License Agreement Screenshot">
+
+                <p>If you want to change the location, change the installation location and then click <strong>"Next."</strong></p>
+                <img src="/MagicGamepad/2.png" alt="Installation Location Screenshot">
+
+                <p>Click <strong>"Install"</strong></p>
+                <img src="/MagicGamepad/3.png" alt="Installation Progress Screenshot">
+
+                <p>For the app to work properly, it's recommended to reboot your system. You can do this by checking the reboot option and clicking <strong>"Finish,"</strong> or click <strong>"No, I will restart the computer later"</strong> and click <strong>"Finish"</strong> to complete the setup without rebooting.</p>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== CONNECTING ====== -->
+            <section class="guide-section" id="connect">
+                <h2>Connecting Your Mobile to Desktop</h2>
+                <p>For Wi-Fi, mobile hotspot, or USB tethering, both devices must be on the same local network (no internet connection is required). If you're using mobile hotspot or USB tethering, turn off mobile data or Wi-Fi on the Android device to ensure proper connection, or connect manually if needed. For Bluetooth, pair the devices before connecting through the app.</p>
+
+                <p>Open the desktop app.</p>
+                <img src="/MagicGamepad/4.png" alt="Desktop App Screenshot">
+                <p>You'll see the connection status and IP address displayed.</p>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== WIFI ====== -->
+            <section class="guide-section" id="wifi">
+                <h2>Connecting via Wi-Fi or Mobile Hotspot</h2>
+                <p>On your mobile device, open the app.</p>
+                <img src="/MagicGamepad/5.png" class="mobileimg" alt="Mobile App Home Screen">
+
+                <p>Click <strong>"Auto Connect"</strong> to automatically connect to your computer.</p>
+                <img src="/MagicGamepad/6.jpg" class="mobileimg" alt="Mobile App Auto Connect Screen">
+
+                <p>Or click <strong>"Manual Connect,"</strong> enter the displayed IP address, and click <strong>"Connect."</strong></p>
+                <img src="/MagicGamepad/7.png" alt="Mobile App Manual Connect Screen">
+
+                <div class="callout">
+                    <strong>Note:</strong> If you want to connect two or more devices, ensure all devices are connected to the same Wi-Fi network and repeat the connection steps for each device. If you are experiencing any delay, try connecting with USB tethering.
+                </div>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== USB ====== -->
+            <section class="guide-section" id="usb">
+                <h2>Connecting via USB Tethering</h2>
+                <p>Connect a USB cable to your computer and open settings.</p>
+                <img src="/MagicGamepad/8.jpeg" class="mobileimg" alt="Android Settings Screen">
+
+                <p>Click <strong>"Network and internet"</strong></p>
+                <img src="/MagicGamepad/9.jpeg" class="mobileimg" alt="Network and Internet Settings">
+
+                <p>Click <strong>"Hotspot and tethering"</strong></p>
+                <img src="/MagicGamepad/10.jpeg" class="mobileimg" alt="Hotspot and Tethering Settings">
+
+                <p>Enable USB tethering.</p>
+
+                <div class="callout warning">
+                    <strong>Note:</strong> This method may vary depending on the phone brand.
+                </div>
+
+                <div class="callout important">
+                    <strong>Important:</strong> If you want to connect multiple devices using USB tethering, make sure all desired devices are connected before opening the app. Ensure that Wi-Fi and mobile data are disabled while connecting the Android device to prevent any connection conflicts.
+                </div>
+
+                <p>Open Magic Gamepad on both the computer and phone and connect as you would with the Wi-Fi method.</p>
+
+                <p class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/2rbj23qso_8">here</a></p>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/2rbj23qso_8" allowfullscreen="1" title="Magic Gamepad USB Connection Tutorial"></iframe>
+                </div>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== BLUETOOTH ====== -->
+            <section class="guide-section" id="bluetooth">
+                <h2>Connecting via Bluetooth</h2>
+                <p>Pair the devices before connecting through the app. If already paired, you can skip this step.</p>
+
+                <p>Open the desktop app.</p>
+                <img src="/MagicGamepad/4.png" alt="Desktop App Screenshot">
+
+                <p>Open the mobile app.</p>
+                <img src="/MagicGamepad/5.png" class="mobileimg" alt="Mobile App Home Screen">
+
+                <p>Click <strong>"SELECT DEVICE"</strong> to see a list of paired devices.</p>
+                <img src="/MagicGamepad/paireddevice.jpg" alt="Paired Bluetooth Devices List">
+
+                <p>Select your desktop's name. After selecting, your phone will connect. Now you can start controlling your desktop.</p>
+
+                <p class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/cJhylpNVEiI">here</a></p>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/cJhylpNVEiI" allowfullscreen="1" title="Magic Gamepad Bluetooth Connection Tutorial"></iframe>
+                </div>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== GAMEPAD UI ====== -->
+            <section class="guide-section" id="Gamepad_ui">
+                <h2>Gamepad UI and Player Selection</h2>
+                <p>Once connected, MagicGamepad will display a gamepad UI along with a dialogue box that provides an option to select the player number/controller number. This allows for easy identification and configuration for multiple users or devices.</p>
+                <img src="/MagicGamepad/11.jpeg" alt="Gamepad UI Screenshot">
+                <img src="/MagicGamepad/12.jpeg" alt="Player Selection Screenshot">
+                <p>You can connect up to 4 devices and should ensure that you select different numbers for different users.</p>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== GAMEPLAY ====== -->
+            <section class="guide-section" id="gameplay">
+                <h2>Gameplay</h2>
+                <p class="text-center">Watch a gameplay demo to see MagicGamepad in action. Click <a href="https://youtu.be/eRTxnI6T3TU">here</a></p>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/eRTxnI6T3TU" allowfullscreen="1" title="Magic Gamepad Gameplay Demo"></iframe>
+                </div>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== CUSTOMIZATION ====== -->
+            <section class="guide-section" id="customization">
+                <h2>Customization</h2>
+                <p>You can customize the controls to suit your needs. Here's a quick video on how to do it.</p>
+                <div class="video-wrap">
+                    <iframe src="https://www.youtube.com/embed/LqAvQSsCfXo" allowfullscreen="1" title="Magic Gamepad Customization Tutorial"></iframe>
+                </div>
+            </section>
+
+            <hr class="guide-divider">
+
+            <!-- ====== ADDITIONAL FEATURES ====== -->
+            <section class="guide-section" id="additional">
+                <h2>Additional Features</h2>
+
+                <h3 id="volume">Control PC Volume Remotely</h3>
+                <p>You can use the volume buttons on your phone to control the volume of your PC.</p>
+                <div class="video-wrap">
+                    <video controls loop>
+                        <source src="/MagicGamepad/Volume.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <h3 id="touchpad">Phone as Touchpad</h3>
+                <p>You can use your phone as a touchpad.</p>
+                <div class="video-wrap">
+                    <video controls loop>
+                        <source src="/MagicGamepad/Touchpad.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <h3 id="keyboard">Phone as Keyboard</h3>
+                <p>You can use your phone as a keyboard.</p>
+                <div class="video-wrap">
+                    <video controls loop>
+                        <source src="/MagicGamepad/Keyboard.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mg-footer" role="contentinfo">
+        <div class="mg-footer-inner">
+            <div class="mg-footer-brand">🎮 Magic Gamepad</div>
+            <ul class="mg-footer-links">
+                <li><a href="/MagicGamepad/index.html">Home</a></li>
+                <li><a href="/MagicGamepad/help.html">Help</a></li>
+                <li><a href="/MagicGamepad/aboutus.html">About Us</a></li>
+                <li><a href="https://www.youtube.com/@Technosaurus8" target="_blank" rel="noopener">YouTube</a></li>
+            </ul>
+            <div class="mg-footer-copy">
+                &copy; 2024 Magic Gamepad by Technosaurus. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/MagicGamepad/header.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('common/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                });
+
+            // TOC toggle
+            var toc = document.getElementById('helpToc');
+            var toggle = document.getElementById('tocToggle');
+            var close = document.getElementById('tocClose');
+            var backdrop = document.getElementById('tocBackdrop');
+
+            function openToc() {
+                toc.classList.add('open');
+                backdrop.classList.add('open');
+            }
+            function closeToc() {
+                toc.classList.remove('open');
+                backdrop.classList.remove('open');
+            }
+
+            toggle.addEventListener('click', openToc);
+            close.addEventListener('click', closeToc);
+            backdrop.addEventListener('click', closeToc);
+
+            // Close TOC when a link is clicked (mobile)
+            toc.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', closeToc);
+            });
+        });
+    </script>
 </body>
 </html>

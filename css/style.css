@@ -1,5 +1,888 @@
+/* ============================================
+   MAGIC GAMEPAD — Design System
+   ============================================ */
 
-/*** Spinner Start ***/
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: rgba(255, 255, 255, 0.04);
+    --accent-purple: #7c3aed;
+    --accent-cyan: #06b6d4;
+    --accent-gradient: linear-gradient(135deg, #7c3aed, #06b6d4);
+    --text-primary: #f0f0f5;
+    --text-secondary: #9ca3af;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-hover: rgba(255, 255, 255, 0.10);
+    --glow-purple: rgba(124, 58, 237, 0.35);
+    --glow-cyan: rgba(6, 182, 212, 0.25);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ============================================
+   Base & Reset
+   ============================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 68px 0 0 0;
+    overflow-x: hidden;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'DM Sans', 'Inter', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+}
+
+a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: #22d3ee;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   Navbar / Header (Glassmorphic)
+   ============================================ */
+
+.mg-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(10, 10, 15, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--glass-border);
+    padding: 0 0;
+    transition: background var(--transition);
+}
+
+.mg-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+}
+
+.mg-brand {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -0.02em;
+}
+
+.mg-brand:hover {
+    color: var(--text-primary);
+}
+
+.mg-brand .brand-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--accent-gradient);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.mg-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mg-nav li a {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all var(--transition);
+    text-decoration: none;
+}
+
+.mg-nav li a:hover,
+.mg-nav li a.active {
+    color: var(--text-primary);
+    background: var(--glass-bg);
+}
+
+.mg-nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 4px;
+}
+
+@media (max-width: 768px) {
+    .mg-nav-toggle {
+        display: block;
+    }
+
+    .mg-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(10, 10, 15, 0.95);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 12px 24px;
+        gap: 4px;
+    }
+
+    .mg-nav.open {
+        display: flex;
+    }
+
+    .mg-nav li a {
+        display: block;
+        padding: 12px 16px;
+        width: 100%;
+    }
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -68px;
+    padding: 140px 24px 80px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(10, 10, 15, 0.5) 0%,
+            rgba(10, 10, 15, 0.3) 40%,
+            rgba(10, 10, 15, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+/* Animated glow orbs */
+.hero .glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    z-index: 0;
+    animation: float 8s ease-in-out infinite;
+}
+
+.hero .glow-orb.purple {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-purple);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hero .glow-orb.cyan {
+    width: 350px;
+    height: 350px;
+    background: var(--accent-cyan);
+    bottom: 15%;
+    right: 10%;
+    animation-delay: -4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-30px) scale(1.05);
+    }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text .badge-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent-cyan);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin: 0 0 20px;
+    letter-spacing: -0.03em;
+}
+
+.hero-text h1 .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text .hero-desc {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 500px;
+    line-height: 1.75;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    animation: heroFloat 6s ease-in-out infinite;
+}
+
+.hero-image img {
+    max-width: 100%;
+    filter: drop-shadow(0 20px 60px rgba(124, 58, 237, 0.25));
+}
+
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text .hero-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   Buttons
+   ============================================ */
+
+.btn-primary-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--accent-gradient);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+    box-shadow: 0 4px 20px var(--glow-purple);
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px var(--glow-purple);
+    color: #fff;
+}
+
+.btn-primary-glow img {
+    width: 22px;
+    height: 22px;
+}
+
+.btn-outline-glass {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    background: transparent;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all var(--transition);
+    text-decoration: none;
+}
+
+.btn-outline-glass:hover {
+    transform: translateY(-2px);
+    color: var(--text-primary);
+}
+
+.btn-outline-glass img {
+    height: 48px;
+    width: auto;
+}
+
+/* ============================================
+   Section Containers
+   ============================================ */
+
+.section {
+    padding: 100px 24px;
+    position: relative;
+}
+
+.section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+}
+
+.section-header .accent-line {
+    width: 60px;
+    height: 4px;
+    background: var(--accent-gradient);
+    border-radius: 2px;
+    margin: 0 auto 20px;
+}
+
+.section-header p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.08rem;
+}
+
+/* ============================================
+   Features Section (Glassmorphic Cards)
+   ============================================ */
+
+.features-bg {
+    background: var(--bg-secondary);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 1000px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feature-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 36px 28px;
+    text-align: center;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--radius);
+    padding: 1px;
+    background: linear-gradient(135deg, transparent 30%, var(--accent-purple), var(--accent-cyan));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    background: var(--glass-hover);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon-wrap {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: rgba(124, 58, 237, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+}
+
+.feature-card:hover .feature-icon-wrap {
+    background: rgba(124, 58, 237, 0.2);
+    box-shadow: 0 0 30px var(--glow-purple);
+}
+
+.feature-card h4 {
+    font-size: 1.12rem;
+    margin: 0 0 12px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    font-size: 0.92rem;
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Feature SVG Icons — preserved from original */
+.controller {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    content: url('/MagicGamepad/svg/controller_white.svg');
+}
+
+.multi {
+    display: inline-block;
+    width: 55px;
+    height: 40px;
+    content: url('/MagicGamepad/svg/multi_white.svg');
+}
+
+.kbm {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    content: url('/MagicGamepad/svg/kbm_white.svg');
+}
+
+.volume {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    content: url('/MagicGamepad/svg/volume_white.svg');
+}
+
+/* ============================================
+   How It Works — Step Timeline
+   ============================================ */
+
+.steps-bg {
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.steps-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: 0;
+}
+
+.steps-bg .section-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+}
+
+.steps-list::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent-purple), var(--accent-cyan));
+    border-radius: 2px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 28px 0;
+    position: relative;
+}
+
+.step-number {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--accent-purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--accent-cyan);
+    z-index: 1;
+    transition: all var(--transition);
+}
+
+.step-item:hover .step-number {
+    background: var(--accent-gradient);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 0 25px var(--glow-purple);
+}
+
+.step-body h4 {
+    font-size: 1.1rem;
+    margin: 0 0 6px;
+    font-weight: 700;
+}
+
+.step-body p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .steps-list::before {
+        left: 20px;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 0.95rem;
+    }
+
+    .step-item {
+        gap: 18px;
+    }
+}
+
+/* ============================================
+   CTA / Support Section
+   ============================================ */
+
+.cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+@media (max-width: 700px) {
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cta-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    text-align: center;
+    transition: all var(--transition);
+}
+
+.cta-card:hover {
+    background: var(--glass-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+}
+
+.cta-card .cta-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.cta-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 10px;
+}
+
+.cta-card p {
+    margin: 0 0 24px;
+    font-size: 0.95rem;
+}
+
+.cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--accent-cyan);
+    transition: all var(--transition);
+}
+
+.cta-link:hover {
+    gap: 10px;
+    color: #22d3ee;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+
+.mg-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--glass-border);
+    padding: 48px 24px 28px;
+}
+
+.mg-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.mg-footer-brand {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--text-primary);
+}
+
+.mg-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.mg-footer-links a {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: color var(--transition);
+}
+
+.mg-footer-links a:hover {
+    color: var(--text-primary);
+}
+
+.mg-footer-copy {
+    width: 100%;
+    text-align: center;
+    padding-top: 28px;
+    margin-top: 28px;
+    border-top: 1px solid var(--glass-border);
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    .mg-footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   Utilities & Animations
+   ============================================ */
+
+.text-gradient {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* WOW.js / Animate.css overrides for dark theme */
+.wow {
+    visibility: hidden;
+}
+
+/* Back-to-top */
+.back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 44px;
+    height: 44px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.1rem;
+    z-index: 99;
+    transition: all var(--transition);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px var(--glow-purple);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px var(--glow-purple);
+}
+
+/* ============================================
+   Responsive iframe/video (for help page)
+   ============================================ */
+
+@media (max-width: 991px) {
+
+    iframe,
+    video {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+    }
+}
+
+/* ============================================
+   Spinner (kept from original)
+   ============================================ */
+
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -12,303 +895,327 @@
     visibility: visible;
     opacity: 1;
 }
-/*** Spinner End ***/
 
-.back-to-top {
+/* ============================================
+   Help Page Layout
+   ============================================ */
+
+.help-layout {
+    display: block;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 72px 24px 80px;
+    position: relative;
+}
+
+/* TOC Hamburger Toggle Button */
+.toc-toggle {
     position: fixed;
-    right: 30px;
-    bottom: 30px;
-    transition: 0.5s;
-    z-index: 99;
-}
-
-
-/*** Button Start ***/
-.btn {
-    font-weight: 600;
-    transition: .5s;
-}
-
-.btn-square {
-    width: 32px;
-    height: 32px;
-}
-
-.btn-sm-square {
-    width: 34px;
-    height: 34px;
-}
-
-.btn-md-square {
+    top: 80px;
+    left: 20px;
+    z-index: 1001;
     width: 44px;
     height: 44px;
-}
-
-.btn-lg-square {
-    width: 56px;
-    height: 56px;
-}
-
-.btn-xl-square {
-    width: 66px;
-    height: 66px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-md-square,
-.btn-lg-square,
-.btn-xl-square {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: normal;
-}
-
-.btn.btn-primary {
-    color: var(--bs-white);
-    border: none;
-}
-
-.btn.btn-primary:hover {
-    background: var(--bs-dark);
-    color: var(--bs-white);
-}
-
-.btn.btn-light {
-    color: var(--bs-primary);
-    border: none;
-}
-
-.btn.btn-light:hover {
-    color: var(--bs-white);
-    background: var(--bs-dark);
-}
-
-.btn.btn-dark {
-    color: var(--bs-white);
-    border: none;
-}
-
-.btn.btn-dark:hover {
-    color: var(--bs-primary);
-    background: var(--bs-light);
-}
-
-
-/*** Topbar Start ***/ 
-.topbar .dropdown-toggle::after {
-    border: none;
-    content: "\f107";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 600;
-    vertical-align: middle;
-    margin-left: 8px;
-    color: var(--bs-primary);
-}
-
-.topbar .dropdown .dropdown-menu a:hover {
-    background: var(--bs-primary);
-    color: var(--bs-white);
-}
-
-.topbar .dropdown .dropdown-menu {
-    transform: rotateX(0deg);
-    visibility: visible;
-    background: var(--bs-light);
-    padding-top: 10px;
-    border: 0;
-    transition: .5s;
-    opacity: 1;
-}
-/*** Topbar End ***/
-
-
-/*** Navbar Start ***/
-.nav-bar {
-    background: var(--bs-white);
-    transition: 1s;
-}
-
-.navbar-light .navbar-brand img {
-    max-height: 60px;
-    transition: .5s;
-}
-
-.nav-bar .navbar-light .navbar-brand img {
-    max-height: 50px;
-}
-
-.navbar .navbar-nav .nav-item .nav-link {
-    padding: 0;
-}
-
-.navbar .navbar-nav .nav-item {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-.navbar-light .navbar-nav .nav-item:hover,
-.navbar-light .navbar-nav .nav-item.active,
-.navbar-light .navbar-nav .nav-item:hover .nav-link,
-.navbar-light .navbar-nav .nav-item.active .nav-link {
-    color: var(--bs-primary);
-}
-
-@media (max-width: 991px) {
-    html,body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    iframe,video {
-        width: 640px;
-        height: 360px;
-    }
-}
-
-@media (max-width: 767px) {
-    html,body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-    }
-    iframe,video {
-        width: 426px;
-        height: 240px;
-    }
-}
-
-
-/*** Feature Start ***/
-
-.controller {
-    display: inline-block;
-    width: 90; /* Adjust width as needed */
-    height: 90px; /* Adjust height as needed */
-    content: url('/MagicGamepad/svg/controller.svg');
-    background-size: contain; /* or cover, depending on your needs */
-    background-repeat: no-repeat; /* Prevents repetition of the SVG */
-    background-position: center;
-}
-
-.multi{
-    display: inline-block;
-    width: 90px; /* Adjust width as needed */
-    content: url('/MagicGamepad/svg/multi.svg');
-    background-size: contain; /* or cover, depending on your needs */
-    background-repeat: no-repeat; /* Prevents repetition of the SVG */
-    background-position: center;
-}
-
-.kbm{
-    display: inline-block;
-    width: 100px; /* Adjust width as needed */
-    content: url('/MagicGamepad/svg/kbm.svg');
-    background-size: contain; /* or cover, depending on your needs */
-    background-repeat: no-repeat; /* Prevents repetition of the SVG */
-    background-position: center;
-}
-
-.volume{
-    display: inline-block;
-    width: 100px; /* Adjust width as needed */
-    content: url('/MagicGamepad/svg/volume.svg');
-    background-size: contain; /* or cover, depending on your needs */
-    background-repeat: no-repeat; /* Prevents repetition of the SVG */
-    background-position: center;
-}
-
-.feature .feature-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--glass-border);
     border-radius: 10px;
-    background: var(--bs-white);
-    transition: 0.5s;
-}
-
-.feature .feature-item:hover {
-    background: var(--bs-primary);
-}
-
-.feature .feature-item .feature-icon {
-    position: relative;
-    width: 100px;
-    display: inline-flex;
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: var(--bs-light);
+    transition: all var(--transition);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-.feature .feature-item:hover .feature-icon i {
-    z-index: 9;
+.toc-toggle:hover {
+    background: var(--glass-hover);
+    border-color: var(--accent-purple);
+    box-shadow: 0 4px 20px var(--glow-purple);
 }
 
-.feature .feature-item .feature-icon::after {
-    content: "";
-    position: absolute;
+/* Backdrop overlay */
+.toc-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1002;
+}
+
+.toc-backdrop.open {
+    display: block;
+}
+
+/* Table of Contents Sidebar — slide-out drawer */
+.help-toc {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 280px;
+    height: 100vh;
+    z-index: 1003;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--glass-border);
+    padding: 24px;
+    overflow-y: auto;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.help-toc.open {
+    left: 0;
+}
+
+.toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.toc-header h3 {
+    margin: 0;
+}
+
+.toc-close {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 0 4px;
+    line-height: 1;
+    transition: color var(--transition);
+}
+
+.toc-close:hover {
+    color: var(--text-primary);
+}
+
+.help-toc h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent-cyan);
+    margin: 0 0 16px;
+    font-weight: 700;
+}
+
+.help-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.help-toc-list li {
+    margin-bottom: 2px;
+}
+
+.help-toc-list li a {
+    display: block;
+    padding: 7px 12px;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    border-radius: 6px;
+    transition: all var(--transition);
+    text-decoration: none;
+}
+
+.help-toc-list li a:hover {
+    color: var(--text-primary);
+    background: var(--glass-hover);
+}
+
+.help-toc-list .toc-sub {
+    padding-left: 16px;
+}
+
+.help-toc-list .toc-sub li a {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+}
+
+/* Help Content Area */
+.help-content {
+    min-width: 0;
+}
+
+.help-page-title {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+}
+
+.help-page-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin: 0 0 40px;
+}
+
+/* Guide Sections */
+.guide-section {
+    margin-bottom: 48px;
+    scroll-margin-top: 84px;
+}
+
+.guide-section h2 {
+    font-size: 1.5rem;
+    margin: 0 0 8px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.guide-section h3 {
+    font-size: 1.15rem;
+    margin: 28px 0 8px;
+    color: var(--text-primary);
+}
+
+.guide-section p {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.guide-section ul,
+.guide-section ol {
+    padding-left: 24px;
+    margin: 12px 0;
+}
+
+.guide-section li {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+
+.guide-section strong {
+    color: var(--text-primary);
+}
+
+/* Images in guide */
+.guide-section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--glass-border);
+    margin: 16px 0;
+}
+
+.guide-section img.mobileimg {
+    max-width: 280px;
+}
+
+/* Videos & Iframes in guide */
+.guide-section .video-wrap {
+    position: relative;
     width: 100%;
-    height: 0;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    margin: 16px 0;
+    background: #000;
+}
+
+.guide-section .video-wrap iframe,
+.guide-section .video-wrap video {
+    position: absolute;
     top: 0;
     left: 0;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background: var(--bs-dark);
-    transition: 0.5s;
-    z-index: 1;
-}
-
-.feature .feature-item:hover .feature-icon::after {
+    width: 100%;
     height: 100%;
+    border: none;
 }
 
-.feature .feature-item .feature-icon {
-    color: var(--bs-primary);
+/* Callout boxes */
+.callout {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-left: 3px solid var(--accent-cyan);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.92rem;
 }
 
-.feature .feature-item .feature-icon,
-.feature .feature-item h4,
-.feature .feature-item p {
-    transition: 0.5s;
+.callout.warning {
+    border-left-color: #f59e0b;
 }
 
-.feature .feature-item:hover .feature-icon .volume{
-    color: var(--bs-white);
-    content: url('/MagicGamepad/svg/volume_white.svg');
+.callout.important {
+    border-left-color: var(--accent-purple);
 }
 
-.feature .feature-item:hover .feature-icon .kbm{
-    color: var(--bs-white);
-    content: url('/MagicGamepad/svg/kbm_white.svg');
+.callout strong {
+    color: var(--accent-cyan);
 }
 
-.feature .feature-item:hover .feature-icon .multi{
-    color: var(--bs-white);
-    content: url('/MagicGamepad/svg/multi_white.svg');
+.callout.warning strong {
+    color: #f59e0b;
 }
 
-.feature .feature-item:hover .feature-icon .controller{
-    color: var(--bs-white);
-    content: url('/MagicGamepad/svg/controller_white.svg');
-}
-.feature .feature-item:hover h4,
-.feature .feature-item:hover p {
-    color: var(--bs-white);
+.callout.important strong {
+    color: var(--accent-purple);
 }
 
-.feature .feature-item:hover a.btn {
-    background: var(--bs-white);
-    color: var(--bs-primary);
+/* Section divider */
+.guide-divider {
+    border: none;
+    border-top: 1px solid var(--glass-border);
+    margin: 40px 0;
 }
 
-.feature .feature-item:hover a.btn:hover {
-    background: var(--bs-dark);
-    color: var(--bs-white);
+/* About Page */
+.about-content {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
 }
-/*** Feature End ***/
+
+.about-content h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin: 0 0 24px;
+    text-align: center;
+}
+
+.about-content h3 {
+    font-size: 1.3rem;
+    margin: 32px 0 12px;
+}
+
+.about-content h5 {
+    font-size: 1.05rem;
+    margin: 20px 0 8px;
+    color: var(--accent-cyan);
+}
+
+.about-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.about-content ul {
+    padding-left: 24px;
+}
+
+.about-content li {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+    line-height: 1.7;
+}
+
+.about-content a {
+    color: var(--accent-cyan);
+    word-break: break-all;
+}
+
+.about-divider {
+    border: none;
+    border-top: 1px solid var(--glass-border);
+    margin: 28px 0;
+}
