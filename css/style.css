@@ -122,10 +122,9 @@ img {
 }
 
 .mg-brand .brand-icon {
-    width: 32px;
-    height: 32px;
-    background: var(--accent-gradient);
-    border-radius: 8px;
+    width: 50px;
+    background: rgb(0, 0, 0);
+    border-radius: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
