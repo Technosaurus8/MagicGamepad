@@ -162,27 +162,50 @@
 
             <!-- ====== BLUETOOTH ====== -->
             <section class="guide-section" id="bluetooth">
-                <h2>Connecting via Bluetooth on Windows PC</h2>
-                <p>Pair the devices before connecting through the app. If already paired, you can skip this step.</p>
-
-                <p>Open the desktop app.</p>
-                <img src="/MagicGamepad/windows-app.png" alt="Desktop App Screenshot">
+                <h2>Connecting via Bluetooth</h2>
+                <p>Magic Gamepad supports two Bluetooth connection modes. Choose the mode that best suits your device and follow the corresponding setup instructions below.</p>
 
                 <p>Open the mobile app.</p>
                 <img src="/MagicGamepad/mobile-home-page.jpeg" class="mobileimg" alt="Mobile App Home Screen">
 
-                <p>Click <strong>"Bluetooth Connect"</strong> to select between different bluetooth mode.</p>
+                <p>Tap <strong>Bluetooth Connect</strong> to choose a Bluetooth connection mode.</p>
                 <img src="/MagicGamepad/bluetooth-mode-select.png" class="mobileimg"  alt="Bluetooth Select dialogue">
                 
-                <p>Click the continue under the Magic Gamepad Server section</p>
-                <img src="/MagicGamepad/bluetooth-select-normal.jpeg" class="mobileimg" alt="Paired Bluetooth Devices List">
-
+                <h3 id="bluetooth-server">Magic Gamepad Server</h3>
+                <p>Pair your phone and Windows PC before connecting. If they are already paired, you can continue.</p>
+                <p>Click the <strong>Continue</strong> under the Magic Gamepad Server section</p>
+                <p>Open the desktop app.</p>
+                <img src="/MagicGamepad/windows-app.png" alt="Desktop App Screenshot">
                 <p>Select your desktop's name. After selecting, your phone will connect. Now you can start controlling your desktop.</p>
-
+                <img src="/MagicGamepad/bluetooth-select-normal.jpeg" class="mobileimg" alt="Paired Bluetooth Devices List">
                 <p class="text-center">If you prefer a video tutorial, click <a href="https://youtu.be/cJhylpNVEiI">here</a></p>
                 <div class="video-wrap">
                     <iframe src="https://www.youtube.com/embed/cJhylpNVEiI" allowfullscreen="1" title="Magic Gamepad Bluetooth Connection Tutorial"></iframe>
                 </div>
+
+                <div class="callout important">
+                    <strong>Important:</strong> Bluetooth pairing must be performed while the
+                    <strong>Generic BT controller</strong> screen is open. If the target
+                    device was previously paired while this screen was not open, remove (forget)
+                    the pairing from your phone's Bluetooth settings before pairing again.
+                </div>                
+                <p>Click the <strong>Continue</strong> under the Generic BT controller section</p>
+                <p>If the target device was previously paired while this screen was not open, remove (forget) the pairing from your phone's Bluetooth settings.</p>
+                <img src="no-paired-device.png" class="mobileimg">
+                <p>Keep the Bluetooth HID Controller screen open. And open your phone's Bluetooth settings.</p>
+                <p>Pair your phone with the target device using your phone's Bluetooth settings, then return to Magic Gamepad.</p>
+                <p>Select the paired device from the list. Magic Gamepad will connect automatically, and you can start controlling the device.</p>
+                <div class="callout important">
+                    <strong>Changing the Bluetooth HID Descriptor:</strong>
+                    <img src="hid-descriptor.png" class="mobileimg" alt="Bluetooth HID Descriptors">
+                    Magic Gamepad provides two Bluetooth HID descriptors for better compatibility with different devices.
+                    <ul>
+                        <li>Use the <strong>Android Gamepad</strong> descriptor when connecting to Android devices such as phones, tablets, or Android TV.</li>
+                        <li>Use the <strong>Joystick</strong> descriptor for Windows, Linux, and other supported Bluetooth HID hosts.</li>
+                    </ul>
+                    If you change the Bluetooth HID descriptor in Settings, you must remove (forget) the existing Bluetooth pairing and pair the device again while the <strong>Generic BT Controller</strong> screen is open.
+                </div>
+                
             </section>
 
             <hr class="guide-divider">
@@ -223,8 +246,8 @@
             <section class="guide-section" id="additional">
                 <h2>Additional Features</h2>
 
-                <h3 id="volume">Control PC Volume Remotely</h3>
-                <p>You can use the volume buttons on your phone to control the volume of your PC.</p>
+                <h3 id="volume">Control target device Volume</h3>
+                <p>You can use the volume buttons on your phone to control the volume of your target device.</p>
                 <div class="video-wrap">
                     <video controls loop>
                         <source src="/MagicGamepad/Volume.mp4" type="video/mp4">
