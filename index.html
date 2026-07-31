@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Magic Gamepad — Transform Your Phone Into a Game Controller</title>
     <meta name="description"
-        content="Magic Gamepad turns your Android phone into a versatile game controller. Enjoy seamless multiplayer gaming, touchpad, keyboard, and volume control over Wi-Fi, USB, or Bluetooth.">
+        content="Turn your Android phone into a powerful game controller using PC Mode or Bluetooth HID Mode. Supports Windows, Android, Linux, multiplayer, multiple custom layouts, sensor-based steering, slider triggers, keyboard, touchpad, and more.">
     <meta name="keywords"
-        content="gamepad, game controller, android controller, phone gamepad, multiplayer gaming, PC controller, XInput, wireless controller">
+        content="Magic Gamepad, Android game controller, Bluetooth HID, Bluetooth gamepad, Phone as controller, Virtual gamepad, Windows controller, Android TV controller, Linux game controller, Custom controller layouts, Sensor steering, Slider triggers, Wireless game controller, XInput controller, Multiplayer controller">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Magic Gamepad — Transform Your Phone Into a Game Controller">
@@ -82,11 +82,11 @@
             <div class="section-inner">
                 <div class="section-header wow fadeInUp" data-wow-delay="0.1s">
                     <div class="accent-line"></div>
-                    <h2>Powerful Features</h2>
+                    <h2>Useful Features</h2>
                     <p>Everything you need to transform your phone into a controller</p>
                 </div>
                 <div class="features-grid">
-                    <div class="feature-card wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <div class="feature-card wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-icon-wrap">
                             <i class="windows"></i>
                         </div>
@@ -99,8 +99,8 @@
                             <i class="fa-brands fa-bluetooth-b" style="font-size: 44px;"></i>
                         </div>
                         <h4>Bluetooth HID Mode</h4>
-                        <p>Connect directly to compatible Bluetooth-enabled devices without installing the Windows companion app. Works with Windows, Android, Android TV, Linux, and other Bluetooth HID hosts.</p>
-                    </div>
+                        <p>Connect directly to compatible Bluetooth-enabled devices without installing the Windows companion app. Works with Windows, Android, Linux, and other Bluetooth HID hosts.</p>
+                    </div> -->
 
                     <div class="feature-card wow fadeInUp" data-wow-delay="0.3s">
                         <div class="feature-icon-wrap">
@@ -137,59 +137,105 @@
             </div>
         </section>
 
-        <!-- ====== HOW IT WORKS ====== -->
-        <section class="section steps-bg" id="how-it-works"
-            style="background-image: url('bgimg2.jpg'); background-size: cover; background-position: center;">
+        <!-- ====== CONNECTION MODES ====== -->
+        <section class="section connection-bg" id="connection-modes">
             <div class="section-inner">
+
                 <div class="section-header wow fadeInUp" data-wow-delay="0.1s">
                     <div class="accent-line"></div>
-                    <h2>How It Works</h2>
-                    <p>Get up and running in minutes with just five simple steps.</p>
+                    <h2>Choose Your Connection Mode</h2>
+                    <p>Both modes support the complete Magic Gamepad experience. Choose the one that best fits your setup.</p>
                 </div>
 
-                <ol class="steps-list">
-                    <li class="step-item wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="step-number">1</div>
-                        <div class="step-body">
-                            <h4>Download the Mobile App</h4>
-                            <p>Download MagicGamepad from the Google Play Store and install it on your Android device.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="step-item wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="step-number">2</div>
-                        <div class="step-body">
-                            <h4>Download the Desktop App</h4>
-                            <p>Download the MagicGamepad desktop app for Windows from our website and install it on your
-                                PC.</p>
-                        </div>
-                    </li>
-                    <li class="step-item wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="step-number">3</div>
-                        <div class="step-body">
-                            <h4>Connect Your Devices</h4>
-                            <p>Connect your Android device to your PC using Wi-Fi, USB tethering, hotspot, or Bluetooth.
-                                Follow our easy setup guide to get started quickly.</p>
-                        </div>
-                    </li>
-                    <li class="step-item wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="step-number">4</div>
-                        <div class="step-body">
-                            <h4>Select Your Controller Number</h4>
-                            <p>Choose your player number to ensure seamless multiplayer gaming. Connect up to 4 devices
-                                for an engaging experience.</p>
-                        </div>
-                    </li>
-                    <li class="step-item wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="step-number">5</div>
-                        <div class="step-body">
-                            <h4>Start Playing!</h4>
-                            <p>Start gaming, controlling media, or navigating your PC with ease using MagicGamepad.</p>
-                        </div>
-                    </li>
-                </ol>
+                <div class="comparison-wrapper wow fadeInUp" data-wow-delay="0.2s">
+
+                    <table class="comparison-table">
+
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>
+                                    <i class="windows"></i><br>
+                                    PC Mode
+                                </th>
+                                <th>
+                                    <i class="fab fa-bluetooth-b" style="font-size: 35px;"></i><br>
+                                    Bluetooth HID Mode
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Windows Companion App</td>
+                                <td>Required</td>
+                                <td>Not Required</td>
+                            </tr>
+
+                            <tr>
+                                <td>Connection</td>
+                                <td>Wi-Fi, USB Tethering, Bluetooth</td>
+                                <td>Bluetooth HID</td>
+                            </tr>
+
+                            <tr>
+                                <td>XInput Support</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-times"></i> Uses DInput</td>
+                            </tr>
+
+                            <tr>
+                                <td>Windows</td>
+                                <td><i class="fas fa-check"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>Android Devices</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>Linux</td>
+                                <td><i class="fas fa-times"></i></td>
+                                <td><i class="fas fa-check"></i></td>
+                            </tr>
+
+                            <tr>
+                                <td>Best For</td>
+                                <td><strong>Maximum Windows Game Compatibility</strong></td>
+                                <td><strong>Universal Device Compatibility</strong></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <div class="connection-note wow fadeInUp" data-wow-delay="0.3s">
+                    <p>
+                        <i class="fas fa-circle-info"></i>
+                        <strong>Recommendation:</strong> Choose <strong>PC Mode</strong> if you're playing games on Windows and want the best compatibility through XInput.<br> Choose <strong>Bluetooth HID Mode</strong> to connect directly to compatible Bluetooth-enabled devices without installing the Windows companion app.
+                    </p>
+                </div>
+                <div class="compatibility-note callout important">
+                    
+                    <div> 
+                        <p>
+                            <strong>Bluetooth HID Tested On</strong>
+                            Windows, Android phones & tablets, Android TV, and Linux Mint.
+                            Other Bluetooth HID hosts may also work, but compatibility depends on the device and its Bluetooth HID implementation.
+                        </p>
+                    </div>
+                </div>
+
             </div>
+            
         </section>
+        
 
         <!-- ====== SUPPORT & SOCIAL ====== -->
         <section class="section" id="support" style="background: var(--bg-secondary);">

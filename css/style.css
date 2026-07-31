@@ -1221,3 +1221,64 @@ img {
     border-top: 1px solid var(--glass-border);
     margin: 28px 0;
 }
+
+.comparison-wrapper {
+    overflow-x: auto;
+    margin-top: 40px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255,255,255,0.04);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 18px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparison-table thead th {
+    background: rgba(255,255,255,0.06);
+    font-size: 18px;
+}
+
+.comparison-table thead i {
+    font-size: 30px;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(255,255,255,0.03);
+}
+
+.comparison-table .fa-check {
+    color: #4CAF50;
+}
+
+.comparison-table .fa-times {
+    color: #F44336;
+}
+
+@media (max-width: 768px) {
+    .comparison-table th,
+    .comparison-table td {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .comparison-table thead i {
+        font-size: 24px;
+    }
+}
